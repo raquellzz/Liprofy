@@ -5,10 +5,11 @@
 
 class music
 {
-    private:
+private:
     std::string title;
     std::string creator;
-    public:
+
+public:
     void music(std::string title, std::string creator);
     void set_title(std::string title);
     void set_creator(std::string creator);

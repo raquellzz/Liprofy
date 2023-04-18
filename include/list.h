@@ -7,6 +7,7 @@ class list
 private:
     knot *head;
     knot *tail;
+
 public:
     void list(knot *head, knot *tail);
     void set_head(knot *head);

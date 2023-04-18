@@ -8,6 +8,7 @@ class knot
 private:
     T value;
     knot *next;
+
 public:
     void knot(T value, knot *next);
     void set_value(T value);
