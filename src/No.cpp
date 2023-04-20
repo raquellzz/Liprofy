@@ -1,10 +1,10 @@
 #include <iostream>
-#include "knot.h"
+#include "No.h"
 
-void knot::knot(T value, knot *next)
+void No::No(T valor)
 {
-    this->title = title;
-    this->next = next;
+    this->valor = valor;
+    this->proximo = nullptr;
 }
 void knot::set_value(T value)
 {
