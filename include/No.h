@@ -1,37 +1,22 @@
 #include <iostream>
-#include "music.h"
-#ifndef NO
-#define NO
+#ifndef NO_H
+#define NO_H
 
+template <typename N> class No {
+    private:
+    N valor;
+    No<N> *proximo;
 
-class No
-{
-private:
-    music valor;
-    No *proximo;
+    public:
+        void No(N valor);
 
-public:
-    void No::No(T valor)
-    {
-        this->valor = valor;
-        this->proximo = nullptr;
-    }
-    void knot::set_valor(T value)
-    {
-        this->value = value;
-    }
-    void knot::set_proximo(knot *next)
-    {
-        this->next = next;
-    }
-    T knot::get_valor()
-    {
-        return value;
-    }
-    knot *knot::get_proximo()
-    {
-        return next;
-    }
+        void set_valor(N value);
+
+        void set_proximo(No<N> *next);
+
+        N get_valor();
+
+        No<N> *get_proximo();
 };
 
 #endif
