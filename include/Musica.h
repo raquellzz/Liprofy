@@ -10,9 +10,9 @@ private:
     std::string autor;
 
 public:
-    void Musica();
+    Musica();
     
-    void Musica(std::string titulo, std::string autor);
+    Musica(std::string titulo, std::string autor);
 
     void set_titulo(std::string titulo);
 

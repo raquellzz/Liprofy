@@ -1,12 +1,12 @@
 #include <iostream>
 #include "Musica.h"
 
-    void Musica::Musica()
+    Musica::Musica()
     {
         this->titulo = "";
         this->autor = "";
     }
-    void Musica::Musica(std::string titulo, std::string autor)
+    Musica::Musica(std::string titulo, std::string autor)
     {
         this->titulo = titulo;
         this->autor = autor;
