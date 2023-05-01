@@ -27,7 +27,7 @@
 // }
 
 // template <typename N>
-// No *No<N>::get_proximo()
+// No<N> No<N>::get_proximo()
 // {
 //     return next;
 // }
