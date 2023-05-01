@@ -57,29 +57,83 @@ void Playlist::inserir(Musica *novo){
     }
 }
 
-// void Playlist::deletar(std::string titulo, std::string artista){
-//     Musica *atual = new Musica;
-//     Musica *anterior = new Musica;
 
-//     int pos, achou = 0;
-//     atual = cabeca;
 
-//     int tam = 1;
-// }
+void Playlist::deletar(std::string titulo){
+    Musica *corr = new Musica;
+    Musica *anterior = new Musica;
+
+    corr = cabeca;
+    int achou = 0, pos = 0, tam = 0;
+
+    while(corr != nullptr){
+        if(corr->titulo == titulo){
+            pos = tam;
+            achou = 1;
+        }
+        tam ++;
+        corr = corr->proximo;
+    }
+
+    corr = cabeca;
+
+    if(achou == 0){
+        std::cout << "A música digitada não está na playlist" << std::endl;
+    }
+    else {
+        
+        if(achou == 1){
+            cabeca = cabeca->proximo;
+            delete corr;
+        }
+        else if(achou == tam){
+            while(corr->proximo != nullptr){
+                anterior = corr;
+                corr = corr->proximo;
+            }
+            cauda = anterior;
+            anterior->proximo = nullptr;
+            delete corr;
+        }
+        else{
+            for(int i = 0; i < pos; i ++){
+                anterior = corr;
+                corr = corr->proximo;
+            }
+            anterior->proximo = corr->proximo;
+        }
+    }
+
+}
 
 
 //imprime todas as músicas de uma playlist
 void Playlist::listar(){
     Musica *corr = new Musica;
     corr = cabeca;
-
+    int i = 1;
     while(corr != nullptr){
-        std::cout << "  -- Título: " << corr->titulo << ", artista: " << corr->artista << std::endl;
+        std::cout << "Música " << i << "  -- Título: " << corr->titulo << ", artista: " << corr->artista << std::endl;
         corr = corr->proximo;
+        i ++;
     }
 }
 
 
-void Playlist::tocar(int n){
+void Playlist::tocar(){
+    Musica *corr = new Musica;
+    corr = cabeca;
+    char acao = 's';
 
+    while(corr != nullptr){
+        if(acao == 'n'){
+            break;
+        }
+        else{
+            std::cout << "  -- Título: " << corr->titulo << ", artista: " << corr->artista << std::endl;
+            corr = corr->proximo;
+            std::cin >> acao;
+        }
+    }
+    std::cout << "Acabaram as músicas" << std::endl;
 }

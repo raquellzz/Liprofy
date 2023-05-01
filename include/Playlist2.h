@@ -22,11 +22,11 @@ public:
 
     void inserir(Musica *novo);
 
-    //void deletar(std::string titulo, std::string artista);
+    void deletar(std::string titulo);
 
     void listar();
 
-    void tocar(int n);
+    void tocar();
 
 };
 

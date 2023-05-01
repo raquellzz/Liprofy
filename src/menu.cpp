@@ -54,6 +54,8 @@ void gerenc_play(Lista_Playlist *geral, Playlist *geral2) {
       std::cin.ignore();
       getline(std::cin, nome_p);
 
+      
+
       std::cout << std::endl
                 << ">>> A playlist foi deletada com sucesso" << std::endl;
       break;
@@ -113,7 +115,7 @@ void gerenc_music(Playlist *geral) {
     std::cout << "0. Voltar" << std::endl;
     std::cout << "1. Adicionar uma Música" << std::endl;
     std::cout << "2. Remover uma Música" << std::endl;
-    std::cout << "3. Listar Músicas" << std::endl << std::endl;
+    std::cout << "3. Tocar Músicas" << std::endl << std::endl;
   
 
     std::cin >> acao_sec;
@@ -149,14 +151,21 @@ void gerenc_music(Playlist *geral) {
                 << "Digite o título da música a ser deletada: " << std::endl;
       std::cin.ignore();
       getline(std::cin, titulo);
-    }
+
+      geral->deletar(titulo);
 
       std::cout << ">>> A música foi deletada com sucesso" << std::endl;
+      break;
+    }
+
+
+
     case 3: // imprime todas as músicas adicionadas ao todo
     {
-      std::cout << "Aqui estão todas as músicas cadastradas: " << std::endl;
+      std::cout << "Para continuar tocando, digite s. Para parar, digite n" << std::endl;
 
-      geral->listar();
+      // geral->listar();
+      geral->tocar();
 
       break;
     }
