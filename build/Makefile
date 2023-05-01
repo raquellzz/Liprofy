@@ -129,101 +129,53 @@ program/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/build
 .PHONY : program/fast
 
-src/Lista.o: src/Lista.cpp.o
-.PHONY : src/Lista.o
+src/Lista_Playlist.o: src/Lista_Playlist.cpp.o
+.PHONY : src/Lista_Playlist.o
 
 # target to build an object file
-src/Lista.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Lista.cpp.o
-.PHONY : src/Lista.cpp.o
+src/Lista_Playlist.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Lista_Playlist.cpp.o
+.PHONY : src/Lista_Playlist.cpp.o
 
-src/Lista.i: src/Lista.cpp.i
-.PHONY : src/Lista.i
+src/Lista_Playlist.i: src/Lista_Playlist.cpp.i
+.PHONY : src/Lista_Playlist.i
 
 # target to preprocess a source file
-src/Lista.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Lista.cpp.i
-.PHONY : src/Lista.cpp.i
+src/Lista_Playlist.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Lista_Playlist.cpp.i
+.PHONY : src/Lista_Playlist.cpp.i
 
-src/Lista.s: src/Lista.cpp.s
-.PHONY : src/Lista.s
+src/Lista_Playlist.s: src/Lista_Playlist.cpp.s
+.PHONY : src/Lista_Playlist.s
 
 # target to generate assembly for a file
-src/Lista.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Lista.cpp.s
-.PHONY : src/Lista.cpp.s
+src/Lista_Playlist.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Lista_Playlist.cpp.s
+.PHONY : src/Lista_Playlist.cpp.s
 
-src/Musica.o: src/Musica.cpp.o
-.PHONY : src/Musica.o
+src/Playlist2.o: src/Playlist2.cpp.o
+.PHONY : src/Playlist2.o
 
 # target to build an object file
-src/Musica.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Musica.cpp.o
-.PHONY : src/Musica.cpp.o
+src/Playlist2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Playlist2.cpp.o
+.PHONY : src/Playlist2.cpp.o
 
-src/Musica.i: src/Musica.cpp.i
-.PHONY : src/Musica.i
-
-# target to preprocess a source file
-src/Musica.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Musica.cpp.i
-.PHONY : src/Musica.cpp.i
-
-src/Musica.s: src/Musica.cpp.s
-.PHONY : src/Musica.s
-
-# target to generate assembly for a file
-src/Musica.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Musica.cpp.s
-.PHONY : src/Musica.cpp.s
-
-src/No.o: src/No.cpp.o
-.PHONY : src/No.o
-
-# target to build an object file
-src/No.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/No.cpp.o
-.PHONY : src/No.cpp.o
-
-src/No.i: src/No.cpp.i
-.PHONY : src/No.i
+src/Playlist2.i: src/Playlist2.cpp.i
+.PHONY : src/Playlist2.i
 
 # target to preprocess a source file
-src/No.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/No.cpp.i
-.PHONY : src/No.cpp.i
+src/Playlist2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Playlist2.cpp.i
+.PHONY : src/Playlist2.cpp.i
 
-src/No.s: src/No.cpp.s
-.PHONY : src/No.s
-
-# target to generate assembly for a file
-src/No.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/No.cpp.s
-.PHONY : src/No.cpp.s
-
-src/Playlist.o: src/Playlist.cpp.o
-.PHONY : src/Playlist.o
-
-# target to build an object file
-src/Playlist.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Playlist.cpp.o
-.PHONY : src/Playlist.cpp.o
-
-src/Playlist.i: src/Playlist.cpp.i
-.PHONY : src/Playlist.i
-
-# target to preprocess a source file
-src/Playlist.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Playlist.cpp.i
-.PHONY : src/Playlist.cpp.i
-
-src/Playlist.s: src/Playlist.cpp.s
-.PHONY : src/Playlist.s
+src/Playlist2.s: src/Playlist2.cpp.s
+.PHONY : src/Playlist2.s
 
 # target to generate assembly for a file
-src/Playlist.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Playlist.cpp.s
-.PHONY : src/Playlist.cpp.s
+src/Playlist2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Playlist2.cpp.s
+.PHONY : src/Playlist2.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -258,18 +210,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... program"
-	@echo "... src/Lista.o"
-	@echo "... src/Lista.i"
-	@echo "... src/Lista.s"
-	@echo "... src/Musica.o"
-	@echo "... src/Musica.i"
-	@echo "... src/Musica.s"
-	@echo "... src/No.o"
-	@echo "... src/No.i"
-	@echo "... src/No.s"
-	@echo "... src/Playlist.o"
-	@echo "... src/Playlist.i"
-	@echo "... src/Playlist.s"
+	@echo "... src/Lista_Playlist.o"
+	@echo "... src/Lista_Playlist.i"
+	@echo "... src/Lista_Playlist.s"
+	@echo "... src/Playlist2.o"
+	@echo "... src/Playlist2.i"
+	@echo "... src/Playlist2.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

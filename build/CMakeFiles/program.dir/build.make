@@ -83,81 +83,49 @@ CMakeFiles/program.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/src/main.cpp" -o CMakeFiles/program.dir/src/main.cpp.s
 
-CMakeFiles/program.dir/src/Lista.cpp.o: CMakeFiles/program.dir/flags.make
-CMakeFiles/program.dir/src/Lista.cpp.o: ../src/Lista.cpp
-CMakeFiles/program.dir/src/Lista.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/program.dir/src/Lista.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Lista.cpp.o -MF CMakeFiles/program.dir/src/Lista.cpp.o.d -o CMakeFiles/program.dir/src/Lista.cpp.o -c "/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/src/Lista.cpp"
+CMakeFiles/program.dir/src/Playlist2.cpp.o: CMakeFiles/program.dir/flags.make
+CMakeFiles/program.dir/src/Playlist2.cpp.o: ../src/Playlist2.cpp
+CMakeFiles/program.dir/src/Playlist2.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/program.dir/src/Playlist2.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Playlist2.cpp.o -MF CMakeFiles/program.dir/src/Playlist2.cpp.o.d -o CMakeFiles/program.dir/src/Playlist2.cpp.o -c "/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/src/Playlist2.cpp"
 
-CMakeFiles/program.dir/src/Lista.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/Lista.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/src/Lista.cpp" > CMakeFiles/program.dir/src/Lista.cpp.i
+CMakeFiles/program.dir/src/Playlist2.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/Playlist2.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/src/Playlist2.cpp" > CMakeFiles/program.dir/src/Playlist2.cpp.i
 
-CMakeFiles/program.dir/src/Lista.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/Lista.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/src/Lista.cpp" -o CMakeFiles/program.dir/src/Lista.cpp.s
+CMakeFiles/program.dir/src/Playlist2.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/Playlist2.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/src/Playlist2.cpp" -o CMakeFiles/program.dir/src/Playlist2.cpp.s
 
-CMakeFiles/program.dir/src/Musica.cpp.o: CMakeFiles/program.dir/flags.make
-CMakeFiles/program.dir/src/Musica.cpp.o: ../src/Musica.cpp
-CMakeFiles/program.dir/src/Musica.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/program.dir/src/Musica.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Musica.cpp.o -MF CMakeFiles/program.dir/src/Musica.cpp.o.d -o CMakeFiles/program.dir/src/Musica.cpp.o -c "/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/src/Musica.cpp"
+CMakeFiles/program.dir/src/Lista_Playlist.cpp.o: CMakeFiles/program.dir/flags.make
+CMakeFiles/program.dir/src/Lista_Playlist.cpp.o: ../src/Lista_Playlist.cpp
+CMakeFiles/program.dir/src/Lista_Playlist.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/program.dir/src/Lista_Playlist.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Lista_Playlist.cpp.o -MF CMakeFiles/program.dir/src/Lista_Playlist.cpp.o.d -o CMakeFiles/program.dir/src/Lista_Playlist.cpp.o -c "/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/src/Lista_Playlist.cpp"
 
-CMakeFiles/program.dir/src/Musica.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/Musica.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/src/Musica.cpp" > CMakeFiles/program.dir/src/Musica.cpp.i
+CMakeFiles/program.dir/src/Lista_Playlist.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/Lista_Playlist.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/src/Lista_Playlist.cpp" > CMakeFiles/program.dir/src/Lista_Playlist.cpp.i
 
-CMakeFiles/program.dir/src/Musica.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/Musica.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/src/Musica.cpp" -o CMakeFiles/program.dir/src/Musica.cpp.s
-
-CMakeFiles/program.dir/src/No.cpp.o: CMakeFiles/program.dir/flags.make
-CMakeFiles/program.dir/src/No.cpp.o: ../src/No.cpp
-CMakeFiles/program.dir/src/No.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/program.dir/src/No.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/No.cpp.o -MF CMakeFiles/program.dir/src/No.cpp.o.d -o CMakeFiles/program.dir/src/No.cpp.o -c "/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/src/No.cpp"
-
-CMakeFiles/program.dir/src/No.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/No.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/src/No.cpp" > CMakeFiles/program.dir/src/No.cpp.i
-
-CMakeFiles/program.dir/src/No.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/No.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/src/No.cpp" -o CMakeFiles/program.dir/src/No.cpp.s
-
-CMakeFiles/program.dir/src/Playlist.cpp.o: CMakeFiles/program.dir/flags.make
-CMakeFiles/program.dir/src/Playlist.cpp.o: ../src/Playlist.cpp
-CMakeFiles/program.dir/src/Playlist.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/program.dir/src/Playlist.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/Playlist.cpp.o -MF CMakeFiles/program.dir/src/Playlist.cpp.o.d -o CMakeFiles/program.dir/src/Playlist.cpp.o -c "/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/src/Playlist.cpp"
-
-CMakeFiles/program.dir/src/Playlist.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/Playlist.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/src/Playlist.cpp" > CMakeFiles/program.dir/src/Playlist.cpp.i
-
-CMakeFiles/program.dir/src/Playlist.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/Playlist.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/src/Playlist.cpp" -o CMakeFiles/program.dir/src/Playlist.cpp.s
+CMakeFiles/program.dir/src/Lista_Playlist.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/Lista_Playlist.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/src/Lista_Playlist.cpp" -o CMakeFiles/program.dir/src/Lista_Playlist.cpp.s
 
 # Object files for target program
 program_OBJECTS = \
 "CMakeFiles/program.dir/src/main.cpp.o" \
-"CMakeFiles/program.dir/src/Lista.cpp.o" \
-"CMakeFiles/program.dir/src/Musica.cpp.o" \
-"CMakeFiles/program.dir/src/No.cpp.o" \
-"CMakeFiles/program.dir/src/Playlist.cpp.o"
+"CMakeFiles/program.dir/src/Playlist2.cpp.o" \
+"CMakeFiles/program.dir/src/Lista_Playlist.cpp.o"
 
 # External object files for target program
 program_EXTERNAL_OBJECTS =
 
 program: CMakeFiles/program.dir/src/main.cpp.o
-program: CMakeFiles/program.dir/src/Lista.cpp.o
-program: CMakeFiles/program.dir/src/Musica.cpp.o
-program: CMakeFiles/program.dir/src/No.cpp.o
-program: CMakeFiles/program.dir/src/Playlist.cpp.o
+program: CMakeFiles/program.dir/src/Playlist2.cpp.o
+program: CMakeFiles/program.dir/src/Lista_Playlist.cpp.o
 program: CMakeFiles/program.dir/build.make
 program: CMakeFiles/program.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable program"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable program"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/program.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
