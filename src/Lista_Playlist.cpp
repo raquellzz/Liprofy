@@ -65,10 +65,51 @@ void Lista_Playlist::adicionar_playlist(Playlist *novo){
 }
 
 void Lista_Playlist::remover_playlist(std::string nome){
-    // Playlist *corr = new Playlist;
+    Playlist *corr = new Playlist;
+    Playlist *anterior = new Playlist;
 
+    corr = cabeca;
+    int achou = 0, pos = 0, tam = 0;
 
+    while(corr != nullptr){
+        if(corr->nome_playlist == nome){
+            pos = tam;
+            achou = 1;
+        }
+        tam ++;
+        corr = corr->proximo;
+    }
+
+    corr = cabeca;
+
+    if(achou == 0){
+        std::cout << "A playlist digitada não está na lista" << std::endl;
+    }
+    else {
+        
+        if(achou == 1){
+            cabeca = cabeca->proximo;
+            delete corr;
+        }
+        else if(achou == tam){
+            while(corr->proximo != nullptr){
+                anterior = corr;
+                corr = corr->proximo;
+            }
+            cauda = anterior;
+            anterior->proximo = nullptr;
+            delete corr;
+        }
+        else{
+            for(int i = 0; i < pos; i ++){
+                anterior = corr;
+                corr = corr->proximo;
+            }
+            anterior->proximo = corr->proximo;
+        }
+    }
 }
+
 
 void Lista_Playlist::listar_playlist(){
     Playlist *corr = new Playlist;
@@ -83,6 +124,24 @@ void Lista_Playlist::listar_playlist(){
     }
     std::cout << std::endl;
     
+}
+
+void Lista_Playlist::deletar_musica(std::string titulo){
+    Playlist *corr = new Playlist;
+
+    corr = cabeca;
+    while(corr != nullptr){
+        Musica *corr2 = new Musica;
+        corr2 = corr->cabeca;
+
+        while(corr2 != nullptr){
+            if(corr2->titulo == titulo){
+                corr->deletar(titulo);
+                return;
+            }
+        }
+
+    }
 }
 
 

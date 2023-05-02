@@ -21,7 +21,7 @@ int main() {
       break;
 
     case 2:
-      gerenc_music(play_padrao);
+      gerenc_music(play_padrao, Todas_play);
       break;
 
     case 0:
