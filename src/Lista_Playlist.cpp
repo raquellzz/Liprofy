@@ -9,42 +9,42 @@
 //     this->cauda = cauda;
 // }
 
-int Lista_Playlist::encontrar_playlist(std::string nome){
+int Lista_Playlist::encontrar_playlist(std::string nome){ // retorna a posição da playlist na lista
     Playlist *atual = new Playlist;
     int i = 1, n = 0;
 
     atual = cabeca;
 
-    while(atual != nullptr){
-        if(nome == atual->nome_playlist){
+    while(atual != nullptr){ // percorre a lista
+        if(nome == atual->nome_playlist){ // se o nome da playlist for igual ao nome da playlist atual
             n = i;
         }
         atual = atual->proximo;
         i ++;
     }
 
-    if(n == 0){
+    if(n == 0){ // se n for igual a 0, a playlist não foi encontrada
         std::cout << "A playlist não foi encontrada" << std::endl;
     }
     
-    return n;
+    return n; // retorna a posição da playlist na lista
 }
 
-Playlist* Lista_Playlist::encontra_playlist(std::string nome){
-    Playlist *atual = new Playlist;
-    int i = 1, n = 0;
+Playlist* Lista_Playlist::encontra_playlist(std::string nome){ // retorna a playlist
+    Playlist *atual = new Playlist; // cria um ponteiro para a playlist atual
+    int i = 1, n = 0; // i é a posição da playlist atual na lista, n é a posição da playlist que queremos encontrar na lista
 
     atual = cabeca;
 
-    while(atual != nullptr){
-        if(nome == atual->nome_playlist){
+    while(atual != nullptr){ // percorre a lista
+        if(nome == atual->nome_playlist){ // se o nome da playlist for igual ao nome da playlist atual
             return atual;
         }
         atual = atual->proximo;
         i ++;
     }
 
-    if(n == 0){
+    if(n == 0){ // se n for igual a 0, a playlist não foi encontrada
         std::cout << "A playlist não foi encontrada" << std::endl;
     }
     
@@ -53,30 +53,33 @@ Playlist* Lista_Playlist::encontra_playlist(std::string nome){
 
 
 
-void Lista_Playlist::adicionar_playlist(Playlist *novo){
+void Lista_Playlist::adicionar_playlist(Playlist *novo){ // adiciona uma playlist na lista
 
-    if(cabeca == nullptr){
+    if(cabeca == nullptr){ // se a lista estiver vazia
         cabeca = novo;
         cauda = novo;
         novo = nullptr;
     }
-    else{
+    else{ // se a lista não estiver vazia
         cauda->proximo = novo;
         cauda = novo;
     }
     
 }
 
-void Lista_Playlist::remover_playlist(std::string nome){
+void Lista_Playlist::remover_playlist(std::string nome){ // remove uma playlist da lista
     Playlist *corr = new Playlist;
     Playlist *anterior = new Playlist;
 
     corr = cabeca;
-    int achou = 0, pos = 0, tam = 0;
+    int achou = 0, pos = 0, tam = 0; 
+    // achou é o número de vezes que a playlist foi encontrada na lista
+    //pos é a posição da playlist na lista
+    //tam é o tamanho da lista
 
-    while(corr != nullptr){
-        if(corr->nome_playlist == nome){
-            pos = tam;
+    while(corr != nullptr){ // percorre a lista
+        if(corr->nome_playlist == nome){ // se o nome da playlist for igual ao nome da playlist atual
+            pos = tam; 
             achou = 1;
         }
         tam ++;
@@ -85,17 +88,17 @@ void Lista_Playlist::remover_playlist(std::string nome){
 
     corr = cabeca;
 
-    if(achou == 0){
+    if(achou == 0){ // se a playlist não foi encontrada
         std::cout << "A playlist digitada não está na lista" << std::endl;
     }
-    else {
+    else { // se a playlist foi encontrada
         
-        if(achou == 1){
+        if(achou == 1){ // se a playlist foi encontrada apenas uma vez
             cabeca = cabeca->proximo;
             delete corr;
         }
-        else if(achou == tam){
-            while(corr->proximo != nullptr){
+        else if(achou == tam){ // se a playlist foi encontrada na ultima posição
+            while(corr->proximo != nullptr){ // percorre a lista
                 anterior = corr;
                 corr = corr->proximo;
             }
@@ -103,8 +106,8 @@ void Lista_Playlist::remover_playlist(std::string nome){
             anterior->proximo = nullptr;
             delete corr;
         }
-        else{
-            for(int i = 0; i < pos; i ++){
+        else{ // se a playlist foi encontrada em qualquer outra posição
+            for(int i = 0; i < pos; i ++){ // percorre a lista
                 anterior = corr;
                 corr = corr->proximo;
             }
@@ -114,13 +117,13 @@ void Lista_Playlist::remover_playlist(std::string nome){
 }
 
 
-void Lista_Playlist::listar_playlist(){
+void Lista_Playlist::listar_playlist(){ // lista todas as playlists da lista
     Playlist *corr = new Playlist;
 
     corr = cabeca;
     int i = 1;
-    while(corr != nullptr){
-        std::cout << "Playlist " << i << ": " << corr->nome_playlist << std::endl;
+    while(corr != nullptr){ // percorre a lista
+        std::cout << "Playlist " << i << ": " << corr->nome_playlist << std::endl; // imprime o nome da playlist
         corr->listar();
         i ++;
         corr = corr->proximo;
@@ -129,15 +132,15 @@ void Lista_Playlist::listar_playlist(){
     
 }
 
-void Lista_Playlist::deletar_musica(std::string titulo){
+void Lista_Playlist::deletar_musica(std::string titulo){ // deleta uma musica de todas as playlists
     Playlist *corr = new Playlist;
 
     corr = cabeca;
-    while(corr != nullptr){
+    while(corr != nullptr){ // percorre a lista
         Musica *corr2 = new Musica;
         corr2 = corr->cabeca;
 
-        while(corr2 != nullptr){
+        while(corr2 != nullptr){ // percorre a playlist
             if(corr2->titulo == titulo){
                 corr->deletar(titulo);
                 return;
@@ -147,7 +150,7 @@ void Lista_Playlist::deletar_musica(std::string titulo){
     }
 }
 
-void Lista_Playlist::Destructor_Lista(){
+void Lista_Playlist::Destructor_Lista(){ // destrutor da lista
     Playlist *corr = new Playlist;
     Playlist *anterior = new Playlist;
 
@@ -156,7 +159,7 @@ void Lista_Playlist::Destructor_Lista(){
     while(corr != nullptr){
         anterior = corr;
         corr = corr->proximo;
-        anterior->Destructor_Playlist();
+        anterior->Destructor_Playlist(); // destrutor da playlist
     }
     cabeca = nullptr;
     cauda = nullptr;
