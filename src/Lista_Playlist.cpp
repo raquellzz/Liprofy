@@ -1,13 +1,7 @@
 #include <iostream>
 #include "Lista_Playlist.h"
-#include "Playlist2.h"
-#include "Musica2.h"
-
-// Lista_Playlist::Lista_Playlist(Playlist *cabeca = nullptr, Playlist *cauda = nullptr)
-// {
-//     this->cabeca = cabeca;
-//     this->cauda = cauda;
-// }
+#include "Playlist.h"
+#include "Musica.h"
 
 int Lista_Playlist::encontrar_playlist(std::string nome){ // retorna a posição da playlist na lista
     Playlist *atual = new Playlist;

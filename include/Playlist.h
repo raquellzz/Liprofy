@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Musica2.h"
+#include "Musica.h"
 
 #ifndef PLAYLIST2_H
 #define PLAYLIST2_H
