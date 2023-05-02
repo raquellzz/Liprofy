@@ -411,6 +411,7 @@ Para compilação foi utilizado o Cmake na versão 3.22.1, para testar o program
 
 Dentro da pasta do projeto, para entrar na pasta build, digite o comando 
 ```
+mkdir build
 cd build
 ```
 Em seguida
