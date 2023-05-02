@@ -29,5 +29,7 @@ int main() {
       break;
     }
   }
+  play_padrao->Destructor_Playlist();
+  Todas_play->Destructor_Lista();
   return 0;
 }

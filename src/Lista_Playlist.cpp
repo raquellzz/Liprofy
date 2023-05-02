@@ -1,10 +1,13 @@
 #include <iostream>
 #include "Lista_Playlist.h"
+#include "Playlist2.h"
+#include "Musica2.h"
 
-Lista_Playlist::Lista_Playlist(){
-        this->cabeca = nullptr;
-        this->cauda = nullptr;
-    }
+// Lista_Playlist::Lista_Playlist(Playlist *cabeca = nullptr, Playlist *cauda = nullptr)
+// {
+//     this->cabeca = cabeca;
+//     this->cauda = cauda;
+// }
 
 int Lista_Playlist::encontrar_playlist(std::string nome){
     Playlist *atual = new Playlist;
@@ -142,6 +145,21 @@ void Lista_Playlist::deletar_musica(std::string titulo){
         }
 
     }
+}
+
+void Lista_Playlist::Destructor_Lista(){
+    Playlist *corr = new Playlist;
+    Playlist *anterior = new Playlist;
+
+    corr = cabeca;
+
+    while(corr != nullptr){
+        anterior = corr;
+        corr = corr->proximo;
+        anterior->Destructor_Playlist();
+    }
+    cabeca = nullptr;
+    cauda = nullptr;
 }
 
 

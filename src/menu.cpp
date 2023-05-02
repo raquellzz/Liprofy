@@ -12,7 +12,7 @@ void menu_principal(){
 }
 
 
-void acessar_play(Playlist *espec){
+void acessar_play(Playlist* espec, Playlist *geral){
   int acao_ter;
   while(acao_ter != 0){
     std::cout << std::endl << "Escolha uma ação: " << std::endl << std::endl;
@@ -20,6 +20,7 @@ void acessar_play(Playlist *espec){
     std::cout << "1. Adicionar Música à playlist" << std::endl;
     std::cout << "2. Remover uma Música da Playlist" << std::endl;
     std::cout << "3. Tocar Músicas" << std::endl;
+    std::cout << "4. Listar Músicas" << std::endl << std::endl;
 
   
     std::cin >> acao_ter;
@@ -29,21 +30,37 @@ void acessar_play(Playlist *espec){
         return;
       }
       case 1:{
+        std::cout << "Aqui está uma lista de todas as músicas: " << std::endl;
+        geral->listar();
         Musica *temp = new Musica; 
-        std::string titulo;
+        std::string titulo, artista;
         std::cout << std::endl << "Digite o título de uma música já existente para adicionar à playlist: " << std::endl;
         std::cin.ignore();
         getline(std::cin, titulo);
+        std::cout << std::endl << "Digite o artista dessa música: " << std::endl;
+        getline(std::cin, artista);
 
         temp->titulo = titulo;
+        temp->artista = artista;
         temp->proximo = nullptr;
 
-        espec->inserir(temp);
+        if(geral->buscar(titulo, artista)){
+          espec->inserir(temp);
 
-        std::cout << std::endl << ">>> A música foi adicionada com sucesso" << std::endl;
-        break;
+          std::cout << std::endl << ">>> A música foi adicionada com sucesso" << std::endl;
+          break;
+        }
+        else{
+          std::cout << std::endl << ">>> Essa música não existe" << std::endl;
+          break;
+        }
+
+
       }
       case 2:{
+        std::cout << "Aqui está uma lista de todas as músicas dessa playlist: " << std::endl;
+        espec->listar();
+
         std::string titulo;
         std::cout << std::endl
                   << "Digite o título da música a ser deletada: " << std::endl;
@@ -63,9 +80,15 @@ void acessar_play(Playlist *espec){
 
       break;
       }
+      case 4:{
+        std::cout << "Aqui está uma lista de todas as músicas dessa playlist: " << std::endl;
+        espec->listar();
+
+        break;
+      }
 
     }
-    cout << "\033[2J\033[1;1H";
+   
 
   }
 }
@@ -104,6 +127,8 @@ void gerenc_play(Lista_Playlist *geral, Playlist *geral2) {
 
     case 2: // chama função para deletar uma playlist
     {
+      std::cout << "Aqui está uma lista de todas as playlists: " << std::endl;
+      geral->listar_playlist();
       std::string nome_p;
       std::cout << std::endl
                 << "Digite o nome da playlist a ser deletada: " << std::endl;
@@ -125,8 +150,10 @@ void gerenc_play(Lista_Playlist *geral, Playlist *geral2) {
       break;
     }
 
-    case 4: // adiciona uma música já criada a uma playlist
+    case 4: 
     {
+      std::cout << std::endl << "Aqui estão todas as playlists criadas: " << std::endl;
+      geral->listar_playlist();
       std::string nome_p;
       std::cout << std::endl
                 << "Digite o nome da playlist a ser acessada: " << std::endl;
@@ -135,7 +162,7 @@ void gerenc_play(Lista_Playlist *geral, Playlist *geral2) {
 
       Playlist* temp_p = geral->encontra_playlist(nome_p);
 
-      acessar_play(temp_p);
+      acessar_play(temp_p, geral2);
 
       break;
     }
@@ -143,7 +170,7 @@ void gerenc_play(Lista_Playlist *geral, Playlist *geral2) {
     case 0: // volta para o menu inicial
       return;
     }
-    cout << "\033[2J\033[1;1H";
+    
   }
 }
 
@@ -165,6 +192,8 @@ void gerenc_music(Playlist *geral, Lista_Playlist *geral2) {
     switch (acao_sec) {
     case 1: // chama função para criar um objeto música
     {
+      std::cout << "Aqui está uma lista de todas as músicas: " << std::endl;
+      geral->listar();
       Musica *temp = new Musica;
         std::string titulo;
         std::string artista;
@@ -188,6 +217,8 @@ void gerenc_music(Playlist *geral, Lista_Playlist *geral2) {
 
     case 2: // chama função para deletar um objeto música de todas as playlists
     {
+      std::cout << "Aqui está uma lista de todas as músicas: " << std::endl;
+      geral->listar();
       std::string titulo;
       std::cout << std::endl
                 << "Digite o título da música a ser deletada: " << std::endl;
@@ -223,6 +254,6 @@ void gerenc_music(Playlist *geral, Lista_Playlist *geral2) {
     case 0: // volta para o menu inicial
       return;
     }
-    cout << "\033[2J\033[1;1H";
+    
   }
 }

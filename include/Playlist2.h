@@ -12,9 +12,7 @@ public:
     Musica *cauda;
     Playlist *proximo;
 
-    Playlist();
-
-    Playlist(std::string nome_playlist, Musica *cabeca, Musica *cauda);
+    // Playlist(std::string nome_playlist = "", Musica *cabeca = nullptr, Musica *cauda  = nullptr, Playlist *proximo = nullptr);
 
     int buscar(std::string titulo, std::string artista);
 
@@ -27,6 +25,8 @@ public:
     void listar();
 
     void tocar();
+
+    void Destructor_Playlist();
 
 };
 

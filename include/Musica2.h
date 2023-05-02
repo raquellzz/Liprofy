@@ -9,15 +9,8 @@ public:
     std::string titulo;
     std::string artista;
     Musica *proximo;
-    
-    
-    // Musica(const Musica &t = "", const Musica &a = "", Musica *n = nullptr) : titulo{t}, artista{a}, proximo{n} {}
+    // Musica(std::string titulo = "", std::string artista = "", Musica *proximo = nullptr);
 };
 
 #endif
 
-// Musica::Musica(std::string titulo, std::string artista, Musica *proximo){
-//         this->titulo = titulo;
-//         this->artista = artista;
-//         this->proximo = nullptr;
-//     }

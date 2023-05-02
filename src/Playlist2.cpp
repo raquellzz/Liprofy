@@ -1,16 +1,18 @@
 #include "Playlist2.h"
+#include "Musica2.h"
 
-Playlist::Playlist(){
-        this->nome_playlist = "";
-        this->cabeca = nullptr;
-        this->cauda = nullptr;
-    }
+// Playlist::Playlist(){
+//     this->nome_playlist = "";
+//     this->cabeca = nullptr;
+//     this->cauda = nullptr;
+// }
 
-Playlist::Playlist(std::string nome_playlist, Musica *cabeca, Musica *cauda){
-    this->nome_playlist = nome_playlist;
-    this->cabeca = cabeca;
-    this->cauda = cauda;
-}
+// void Playlist::Playlist(std::string nome_playlist, Musica *cabeca, Musica *cauda = nullptr, Playlist *proximo = nullptr){
+//     this->nome_playlist = nome_playlist;
+//     this->cabeca = cabeca;
+//     this->cauda = cauda;
+//     this->proximo = nullptr;
+// }
 
 int Playlist::buscar(std::string titulo, std::string artista){
     Musica *atual = new Musica;
@@ -20,7 +22,7 @@ int Playlist::buscar(std::string titulo, std::string artista){
 
     while(atual != nullptr){
         if(atual->titulo == titulo && atual->artista == artista){
-            existe ++;
+            existe = 1;
         }
         atual = atual->proximo;
     }
@@ -45,7 +47,6 @@ Musica* Playlist::busca(std::string titulo){
 
 //adiciona uma música na playlist
 void Playlist::inserir(Musica *novo){
-
     if(cabeca == nullptr){
         cabeca = novo;
         cauda = novo;
@@ -64,12 +65,12 @@ void Playlist::deletar(std::string titulo){
     Musica *anterior = new Musica;
 
     corr = cabeca;
-    int achou = 0, pos = 0, tam = 0;
+    int achou = 0, pos = 0, tam = 1;
 
     while(corr != nullptr){
         if(corr->titulo == titulo){
             pos = tam;
-            achou = 1;
+            achou ++;
         }
         tam ++;
         corr = corr->proximo;
@@ -137,3 +138,17 @@ void Playlist::tocar(){
     }
     std::cout << "Acabaram as músicas" << std::endl;
 }
+
+void Playlist::Destructor_Playlist(){
+        Musica *corr = new Musica;
+        Musica *anterior = new Musica;
+
+        corr = cabeca;
+
+        while(corr != nullptr){
+            anterior = corr;
+            corr = corr->proximo;
+            delete anterior;
+        }
+        delete corr;
+    }
