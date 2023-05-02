@@ -4,7 +4,7 @@
 #include "Lista_Playlist.h"
 
 
-void menu_principal(){
+void menu_principal(){ // menu principal
     std::cout << std::endl << "Escolha uma ação: " << std::endl << std::endl;
     std::cout << "0. Sair" << std::endl;
     std::cout << "1. Gerenciar Playlists" << std::endl;
@@ -12,9 +12,9 @@ void menu_principal(){
 }
 
 
-void acessar_play(Playlist* espec, Playlist *geral){
+void acessar_play(Playlist* espec, Playlist *geral){ // menu de gerenciamento de playlists
   int acao_ter;
-  while(acao_ter != 0){
+  while(acao_ter != 0){ // enquanto o usuario não digitar 0
     std::cout << std::endl << "Escolha uma ação: " << std::endl << std::endl;
     std::cout << "0. Voltar" << std::endl;
     std::cout << "1. Adicionar Música à playlist" << std::endl;
@@ -23,13 +23,13 @@ void acessar_play(Playlist* espec, Playlist *geral){
     std::cout << "4. Listar Músicas" << std::endl << std::endl;
 
   
-    std::cin >> acao_ter;
+    std::cin >> acao_ter; // recebe a ação do usuario
 
-    switch(acao_ter){
-      case 0:{
+    switch(acao_ter){ // realiza a ação escolhida
+      case 0:{ // volta para o menu principal
         return;
       }
-      case 1:{
+      case 1:{ // adiciona uma música à playlist
         std::cout << "Aqui está uma lista de todas as músicas: " << std::endl;
         geral->listar();
         Musica *temp = new Musica; 
@@ -44,20 +44,20 @@ void acessar_play(Playlist* espec, Playlist *geral){
         temp->artista = artista;
         temp->proximo = nullptr;
 
-        if(geral->buscar(titulo, artista)){
+        if(geral->buscar(titulo, artista)){ // se a música existir, ela é adicionada à playlist
           espec->inserir(temp);
 
           std::cout << std::endl << ">>> A música foi adicionada com sucesso" << std::endl;
           break;
         }
-        else{
+        else{ // se a música não existir, uma mensagem de erro é exibida
           std::cout << std::endl << ">>> Essa música não existe" << std::endl;
           break;
         }
 
 
       }
-      case 2:{
+      case 2:{ // remove uma música da playlist
         std::cout << "Aqui está uma lista de todas as músicas dessa playlist: " << std::endl;
         espec->listar();
 
@@ -72,7 +72,7 @@ void acessar_play(Playlist* espec, Playlist *geral){
         std::cout << ">>> A música foi deletada com sucesso" << std::endl;
         break;
       }
-      case 3:{
+      case 3:{ // toca a playlist
         std::cout << "Para continuar tocando, digite ""s"". Para parar, digite ""n""" << std::endl;
 
 
@@ -80,7 +80,7 @@ void acessar_play(Playlist* espec, Playlist *geral){
 
       break;
       }
-      case 4:{
+      case 4:{ // lista todas as músicas da playlist
         std::cout << "Aqui está uma lista de todas as músicas dessa playlist: " << std::endl;
         espec->listar();
 
@@ -94,9 +94,9 @@ void acessar_play(Playlist* espec, Playlist *geral){
 }
 
 
-void gerenc_play(Lista_Playlist *geral, Playlist *geral2) {
+void gerenc_play(Lista_Playlist *geral, Playlist *geral2) { // menu de gerenciamento de playlists
   int acao_sec;
-  while (acao_sec != 0) {
+  while (acao_sec != 0) { // enquanto o usuario não digitar 0
     std::cout << std::endl << "Escolha uma ação: " << std::endl << std::endl;
     std::cout << "0. Voltar" << std::endl;
     std::cout << "1. Adicionar uma Playlist" << std::endl;
@@ -150,7 +150,7 @@ void gerenc_play(Lista_Playlist *geral, Playlist *geral2) {
       break;
     }
 
-    case 4: 
+    case 4: // acessa uma playlist
     {
       std::cout << std::endl << "Aqui estão todas as playlists criadas: " << std::endl;
       geral->listar_playlist();
@@ -176,9 +176,9 @@ void gerenc_play(Lista_Playlist *geral, Playlist *geral2) {
 
 
 // mostra as opções do usuário em relação às músicas
-void gerenc_music(Playlist *geral, Lista_Playlist *geral2) {
+void gerenc_music(Playlist *geral, Lista_Playlist *geral2) { // menu de gerenciamento de músicas
   int acao_sec;
-  while (acao_sec != 0) {
+  while (acao_sec != 0) { // enquanto o usuario não digitar 0
     std::cout << std::endl << "Escolha uma ação: " << std::endl;
     std::cout << "0. Voltar" << std::endl;
     std::cout << "1. Adicionar uma Música" << std::endl;
