@@ -7,7 +7,7 @@
 * [Descrição do Projeto](#descrição-do-projeto)
 * [Roteiro de Entradas e Saídas](#roteiro-de-entradas-e-saídas)
 * [Acesso ao Projeto e Compilação](#acesso-ao-projeto-e-compilação)
-* [Pessoas Desenvolvedoras do Projeto](#pessoas-desenvolvedoras)
+* [Pessoas Desenvolvedoras do Projeto](#pessoas-desenvolvedoras-do-projeto)
 
 # Descrição do Projeto
 
@@ -17,7 +17,391 @@ O intuito deste projeto é desenvolver um sistema de música a partir de listas 
 
 Essas são as possibildiades de entrada para o programa, de maneira a serem testadas as suas diversas funcionalidades:
 
+Lembre que nas entradas, apenas podem ser utilizados números, letras em maiúsculo e minúsculo.
 
+```
+0. Sair
+1. Gerenciar Playlists
+2. Gerenciar Músicas
+
+Escolha uma ação: 2
+
+
+0. Voltar
+1. Adicionar uma Música
+2. Remover uma Música
+3. Tocar Músicas
+4. Listar Músicas
+
+Escolha uma ação: 1
+
+Aqui está uma lista de todas as músicas:
+
+Digite o título da música: Admiravel Gado Novo
+Digite o nome do artista: Ze Ramalho
+
+A música foi cadastrada com sucesso
+
+0. Voltar
+1. Adicionar uma Música
+2. Remover uma Música
+3. Tocar Músicas
+4. Listar Músicas
+
+Escolha uma ação: 1
+
+Aqui está uma lista de todas as músicas:
+
+Digite o título da música: Missao Apollo
+Digite o nome do artista: Zimbra
+
+>>> A música foi cadastrada com sucesso
+
+0. Voltar
+1. Adicionar uma Música
+2. Remover uma Música
+3. Tocar Músicas
+4. Listar Músicas
+
+Escolha uma ação: 1
+
+Aqui está uma lista de todas as músicas:
+
+Digite o título da música: Asma
+Digite o nome do artista: Fresno
+
+
+
+>>> A música foi cadastrada com sucesso
+
+0. Voltar
+1. Adicionar uma Música
+2. Remover uma Música
+3. Tocar Músicas
+4. Listar Músicas
+
+Escolha uma ação: 1
+
+Aqui está uma lista de todas as músicas:
+
+Digite o título da música: Tempo de Pipa
+Digite o nome do artista: Cicero
+
+>>> A música foi cadastrada com sucesso
+
+0. Voltar
+1. Adicionar uma Música
+2. Remover uma Música
+3. Tocar Músicas
+4. Listar Músicas
+
+Escolha uma ação: 4
+
+Aqui está uma lista de todas as músicas: 
+Música 1  -- Título: Admiravel Gado Novo, artista: Ze Ramalho
+Música 2  -- Título: Missao Apollo, artista: Zimbra
+Música 3  -- Título: Asma, artista: Fresno
+Música 4  -- Título: Tempo de Pipa, artista: Cicero
+
+0. Voltar
+1. Adicionar uma Música
+2. Remover uma Música
+3. Tocar Músicas
+4. Listar Músicas
+
+Escolha uma ação: 0
+
+0. Sair
+1. Gerenciar Playlists
+2. Gerenciar Músicas
+
+Escolha uma ação: 1
+
+0. Voltar
+1. Adicionar uma Playlist
+2. Remover uma Playlist
+3. Listar Playlists
+4. Acessar uma playlist
+
+Escolha uma ação: 1
+
+Digite um nome para a playlist: Boas
+
+>>> A playlist foi criada com sucesso
+
+0. Voltar
+1. Adicionar uma Playlist
+2. Remover uma Playlist
+3. Listar Playlists
+4. Acessar uma playlist
+
+Escolha uma ação: 1
+
+Digite um nome para a playlist: Marromeno
+
+>>> A playlist foi criada com sucesso
+
+0. Voltar
+1. Adicionar uma Playlist
+2. Remover uma Playlist
+3. Listar Playlists
+4. Acessar uma playlist
+
+Escolha uma ação: 2
+
+Aqui está uma lista de todas as playlists: 
+
+Playlist 1: Boas
+Playlist 2: Marromeno
+
+Digite o nome da playlist a ser deletada: 
+Marromeno
+
+>>> A playlist foi deletada com sucesso
+
+0. Voltar
+1. Adicionar uma Playlist
+2. Remover uma Playlist
+3. Listar Playlists
+4. Acessar uma playlist
+
+Escolha uma ação: 3
+
+Aqui está uma lista de todas as playlists: 
+
+Playlist 1: Boas
+
+0. Voltar
+1. Adicionar uma Playlist
+2. Remover uma Playlist
+3. Listar Playlists
+4. Acessar uma playlist
+
+Escolha uma ação: 4
+
+Playlist 1: Boas
+
+Digite o nome da playlist a ser acessada: 
+Boas
+
+0. Voltar
+1. Adicionar Música à playlist
+2. Remover uma Música da Playlist
+3. Tocar Músicas da Playlist
+4. Listar Músicas da Playlist
+
+Escolha uma ação: 1
+
+Aqui está uma lista de todas as músicas:
+Música 1  -- Título: Admiravel Gado Novo, artista: Ze Ramalho
+Música 2  -- Título: Missao Apollo, artista: Zimbra
+Música 3  -- Título: Asma, artista: Fresno
+Música 4  -- Título: Tempo de Pipa, artista: Cicero
+
+Digite o título de uma música já existente para adicionar à playlist:
+Asma
+Digite o artista dessa música: 
+Fresno
+
+>>> A música foi adicionada com sucesso
+
+0. Voltar
+1. Adicionar Música à playlist
+2. Remover uma Música da Playlist
+3. Tocar Músicas da Playlist
+4. Listar Músicas da Playlist
+
+Escolha uma ação: 1
+
+Aqui está uma lista de todas as músicas:
+Música 1  -- Título: Admiravel Gado Novo, artista: Ze Ramalho
+Música 2  -- Título: Missao Apollo, artista: Zimbra
+Música 3  -- Título: Asma, artista: Fresno
+Música 4  -- Título: Tempo de Pipa, artista: Cicero
+
+Digite o título de uma música já existente para adicionar à playlist:
+Missao Apolo
+Digite o artista dessa música: 
+Zimbra
+
+>>> Essa música não existe
+
+0. Voltar
+1. Adicionar Música à playlist
+2. Remover uma Música da Playlist
+3. Tocar Músicas da Playlist
+4. Listar Músicas da Playlist
+
+Escolha uma ação: 1
+
+Aqui está uma lista de todas as músicas:
+Música 1  -- Título: Admiravel Gado Novo, artista: Ze Ramalho
+Música 2  -- Título: Missao Apollo, artista: Zimbra
+Música 3  -- Título: Asma, artista: Fresno
+Música 4  -- Título: Tempo de Pipa, artista: Cicero
+
+Digite o título de uma música já existente para adicionar à playlist:
+Missao Apollo
+Digite o artista dessa música: 
+Zimbra
+
+>>> A música foi adicionada com sucesso
+
+0. Voltar
+1. Adicionar Música à playlist
+2. Remover uma Música da Playlist
+3. Tocar Músicas da Playlist
+4. Listar Músicas da Playlist
+
+Escolha uma ação: 1
+
+Aqui está uma lista de todas as músicas:
+Música 1  -- Título: Admiravel Gado Novo, artista: Ze Ramalho
+Música 2  -- Título: Missao Apollo, artista: Zimbra
+Música 3  -- Título: Asma, artista: Fresno
+Música 4  -- Título: Tempo de Pipa, artista: Cicero
+
+Digite o título de uma música já existente para adicionar à playlist:
+Tempo de Pipa
+Digite o artista dessa música: 
+Cicero
+
+>>> A música foi adicionada com sucesso
+
+0. Voltar
+1. Adicionar Música à playlist
+2. Remover uma Música da Playlist
+3. Tocar Músicas da Playlist
+4. Listar Músicas da Playlist
+
+Escolha uma ação: 3
+
+Para continuar tocando, digite s. Para parar, digite n
+  -- Título: Asma, artista: Fresno
+s
+  -- Título: Missao Apollo, artista: Zimbra
+s
+-- Título: Tempo de Pipa, artista: Cicero
+s
+Acabaram as músicas
+
+0. Voltar
+1. Adicionar Música à playlist
+2. Remover uma Música da Playlist
+3. Tocar Músicas da Playlist
+4. Listar Músicas da Playlist
+
+Escolha uma ação: 2
+
+Aqui está uma lista de todas as músicas:
+Música 1  -- Título: Asma, artista: Fresno
+Música 2  -- Título: Missao Apollo, artista: Zimbra
+Música 3  -- Título: Tempo de Pipa, artista: Cicero
+
+Digite o título de uma música já existente para adicionar à playlist: 
+Missao Apollo
+
+Digite o artista dessa música: 
+Zimbra
+
+
+>>> Essa música não existe
+
+0. Voltar
+1. Adicionar Música à playlist
+2. Remover uma Música da Playlist
+3. Tocar Músicas da Playlist
+4. Listar Músicas da Playlist
+
+Escolha uma ação: 2
+
+Aqui está uma lista de todas as músicas:
+Música 1  -- Título: Asma, artista: Fresno
+Música 2  -- Título: Tempo de Pipa, artista: Cicero
+
+Digite o título de uma música já existente para adicionar à playlist: 
+Misao Apollo
+
+Digite o artista dessa música: 
+Zimbra
+
+
+>>> A música foi deletada com sucesso
+
+0. Voltar
+1. Adicionar Música à playlist
+2. Remover uma Música da Playlist
+3. Tocar Músicas da Playlist
+4. Listar Músicas da Playlist
+
+Escolha uma ação: 0
+
+0. Voltar
+1. Adicionar uma Playlist
+2. Remover uma Playlist
+3. Listar Playlists
+4. Acessar uma playlist
+
+Escolha uma ação: 0
+
+0. Sair
+1. Gerenciar Playlists
+2. Gerenciar Músicas
+
+Escolha uma ação: 2
+
+0. Voltar
+1. Adicionar uma Música
+2. Remover uma Música
+3. Tocar Músicas
+4. Listar Músicas
+
+Escolha uma ação: 2
+
+Aqui está uma lista de todas as músicas:
+Música 1  -- Título: Admiravel Gado Novo, artista: Ze Ramalho
+Música 2  -- Título: Missao Apollo, artista: Zimbra
+Música 3  -- Título: Asma, artista: Fresno
+Música 4  -- Título: Tempo de Pipa, artista: Cicero
+
+Digite o título da música a ser deletada: 
+Tempo de Pipa
+
+>>> A música foi deletada com sucesso do sistema
+
+0. Voltar
+1. Adicionar uma Música
+2. Remover uma Música
+3. Tocar Músicas
+4. Listar Músicas
+
+Escolha uma ação: 3
+
+Para continuar tocando, digite s. Para parar, digite n
+  -- Título: Admiravel Gado Novo, artista: Ze Ramalho
+s
+  -- Título: Missao Apollo, artista: Zimbra
+s
+  -- Título: Título: Asma, artista: Fresno
+s
+Acabaram as músicas
+
+0. Voltar
+1. Adicionar uma Música
+2. Remover uma Música
+3. Tocar Músicas
+4. Listar Músicas
+
+Escolha uma ação: 0
+
+0. Sair
+1. Gerenciar Playlists
+2. Gerenciar Músicas
+
+Escolha uma ação: 0
+
+
+```
 
 # Acesso ao Projeto e Compilação
 

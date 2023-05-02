@@ -1,6 +1,6 @@
 #include <iostream>
-#include "Musica2.h"
-#include "Playlist2.h"
+#include "Musica.h"
+#include "Playlist.h"
 #include "Lista_Playlist.h"
 #include "menu.cpp"
 
@@ -14,6 +14,7 @@ int main() {
     menu_principal();
 
     std::cin >> acao;
+    std::cout << std::endl;
 
     switch (acao) {
     case 1: // gerencia as playlists

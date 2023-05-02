@@ -1,6 +1,6 @@
 #include <iostream>
-#include "Playlist2.h"
-#include "Musica2.h"
+#include "Playlist.h"
+#include "Musica.h"
 
 #ifndef LISTA_PLAYLIST_H
 #define LISTA_PLAYLIST_H
@@ -12,7 +12,6 @@ public:
     Playlist *cauda; // ponteiro para o ultimo elemento da lista
 
 
-    // Lista_Playlist(Playlist *cabeca = nullptr, Playlist *cauda = nullptr);
 
     int encontrar_playlist(std::string nome); // retorna a posição da playlist na lista
 
