@@ -7,7 +7,7 @@
 * [Descrição do Projeto](#descrição-do-projeto)
 * [Roteiro de Entradas e Saídas](#roteiro-de-entradas-e-saídas)
 * [Acesso ao Projeto e Compilação](#acesso-ao-projeto-e-compilação)
-* [Pessoas Desenvolvedoras do Projeto](#pessoas-desenvolvedoras)
+* [Pessoas Desenvolvedoras do Projeto](#pessoas-desenvolvedoras-do-projeto)
 
 # Descrição do Projeto
 
