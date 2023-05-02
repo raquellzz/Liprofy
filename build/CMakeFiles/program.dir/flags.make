@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/include"
+CXX_INCLUDES = -I/home/turevs/projeto-lp1-crud/include
 
 CXX_FLAGS = -Wall -std=gnu++14
 

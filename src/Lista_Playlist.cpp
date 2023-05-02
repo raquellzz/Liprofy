@@ -91,14 +91,22 @@ void Lista_Playlist::remover_playlist(std::string nome){ // remove uma playlist 
     if(achou == 0){ // se a playlist não foi encontrada
         std::cout << "A playlist digitada não está na lista" << std::endl;
     }
-    else { // se a playlist foi encontrada
+    else {
         
-        if(achou == 1){ // se a playlist foi encontrada apenas uma vez
-            cabeca = cabeca->proximo;
-            delete corr;
+        if(achou == 1){
+            while(corr != nullptr)
+            {
+                if(corr->proximo->nome_playlist == nome && cauda != corr->proximo)
+                {
+                    anterior = corr;
+                    corr = corr->proximo;
+                    delete corr;
+                    break;
+                }
+            }
         }
-        else if(achou == tam){ // se a playlist foi encontrada na ultima posição
-            while(corr->proximo != nullptr){ // percorre a lista
+        else if(achou == tam){
+            while(corr->proximo != nullptr){
                 anterior = corr;
                 corr = corr->proximo;
             }
@@ -106,8 +114,8 @@ void Lista_Playlist::remover_playlist(std::string nome){ // remove uma playlist 
             anterior->proximo = nullptr;
             delete corr;
         }
-        else{ // se a playlist foi encontrada em qualquer outra posição
-            for(int i = 0; i < pos; i ++){ // percorre a lista
+        else{
+            for(int i = 0; i < pos; i ++){
                 anterior = corr;
                 corr = corr->proximo;
             }
@@ -117,13 +125,13 @@ void Lista_Playlist::remover_playlist(std::string nome){ // remove uma playlist 
 }
 
 
-void Lista_Playlist::listar_playlist(){ // lista todas as playlists da lista
+void Lista_Playlist::listar_playlist(){
     Playlist *corr = new Playlist;
 
     corr = cabeca;
     int i = 1;
-    while(corr != nullptr){ // percorre a lista
-        std::cout << "Playlist " << i << ": " << corr->nome_playlist << std::endl; // imprime o nome da playlist
+    while(corr != nullptr){
+        std::cout << "Playlist " << i << ": " << corr->nome_playlist << std::endl;
         corr->listar();
         i ++;
         corr = corr->proximo;
@@ -132,15 +140,15 @@ void Lista_Playlist::listar_playlist(){ // lista todas as playlists da lista
     
 }
 
-void Lista_Playlist::deletar_musica(std::string titulo){ // deleta uma musica de todas as playlists
+void Lista_Playlist::deletar_musica(std::string titulo){
     Playlist *corr = new Playlist;
 
     corr = cabeca;
-    while(corr != nullptr){ // percorre a lista
+    while(corr != nullptr){
         Musica *corr2 = new Musica;
         corr2 = corr->cabeca;
 
-        while(corr2 != nullptr){ // percorre a playlist
+        while(corr2 != nullptr){
             if(corr2->titulo == titulo){
                 corr->deletar(titulo);
                 return;
@@ -150,7 +158,7 @@ void Lista_Playlist::deletar_musica(std::string titulo){ // deleta uma musica de
     }
 }
 
-void Lista_Playlist::Destructor_Lista(){ // destrutor da lista
+void Lista_Playlist::Destructor_Lista(){
     Playlist *corr = new Playlist;
     Playlist *anterior = new Playlist;
 
@@ -159,7 +167,7 @@ void Lista_Playlist::Destructor_Lista(){ // destrutor da lista
     while(corr != nullptr){
         anterior = corr;
         corr = corr->proximo;
-        anterior->Destructor_Playlist(); // destrutor da playlist
+        anterior->Destructor_Playlist();
     }
     cabeca = nullptr;
     cauda = nullptr;

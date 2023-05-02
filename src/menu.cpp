@@ -44,16 +44,18 @@ void acessar_play(Playlist* espec, Playlist *geral){ // menu de gerenciamento de
         temp->artista = artista;
         temp->proximo = nullptr;
 
+        if(geral->buscar(titulo, artista) == 0)
+        { // se a música não existir, uma mensagem de erro é exibida
+          std::cout << std::endl << ">>> Essa música não existe" << std::endl;
+          break;
+        }
         if(geral->buscar(titulo, artista)){ // se a música existir, ela é adicionada à playlist
           espec->inserir(temp);
 
           std::cout << std::endl << ">>> A música foi adicionada com sucesso" << std::endl;
           break;
         }
-        else{ // se a música não existir, uma mensagem de erro é exibida
-          std::cout << std::endl << ">>> Essa música não existe" << std::endl;
-          break;
-        }
+        
 
 
       }
@@ -135,10 +137,14 @@ void gerenc_play(Lista_Playlist *geral, Playlist *geral2) { // menu de gerenciam
       std::cin.ignore();
       getline(std::cin, nome_p);
 
-      geral->remover_playlist(nome_p);
-
-      std::cout << std::endl
-                << ">>> A playlist foi deletada com sucesso" << std::endl;
+      if(geral->encontra_playlist(nome_p) == nullptr){
+        std::cout << std::endl << ">>> Essa playlist não existe" << std::endl;
+        break;
+      }
+      else{
+        geral->remover_playlist(nome_p);
+        std::cout << std::endl << ">>> A playlist foi deletada com sucesso" << std::endl;
+        }
       break;
     }
 
@@ -159,10 +165,14 @@ void gerenc_play(Lista_Playlist *geral, Playlist *geral2) { // menu de gerenciam
                 << "Digite o nome da playlist a ser acessada: " << std::endl;
       std::cin.ignore();
       getline(std::cin, nome_p);
-
-      Playlist* temp_p = geral->encontra_playlist(nome_p);
-
-      acessar_play(temp_p, geral2);
+      if(geral->encontra_playlist(nome_p) == nullptr){
+        std::cout << std::endl << ">>> Essa playlist não existe" << std::endl;
+        break;
+      }
+      else{
+        Playlist* temp_p = geral->encontra_playlist(nome_p);
+        acessar_play(temp_p, geral2);
+        }
 
       break;
     }

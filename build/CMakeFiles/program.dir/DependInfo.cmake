@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/src/Lista_Playlist.cpp" "CMakeFiles/program.dir/src/Lista_Playlist.cpp.o" "gcc" "CMakeFiles/program.dir/src/Lista_Playlist.cpp.o.d"
-  "/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/src/Playlist2.cpp" "CMakeFiles/program.dir/src/Playlist2.cpp.o" "gcc" "CMakeFiles/program.dir/src/Playlist2.cpp.o.d"
-  "/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/src/main.cpp" "CMakeFiles/program.dir/src/main.cpp.o" "gcc" "CMakeFiles/program.dir/src/main.cpp.o.d"
+  "/home/turevs/projeto-lp1-crud/src/Lista_Playlist.cpp" "CMakeFiles/program.dir/src/Lista_Playlist.cpp.o" "gcc" "CMakeFiles/program.dir/src/Lista_Playlist.cpp.o.d"
+  "/home/turevs/projeto-lp1-crud/src/Playlist2.cpp" "CMakeFiles/program.dir/src/Playlist2.cpp.o" "gcc" "CMakeFiles/program.dir/src/Playlist2.cpp.o.d"
+  "/home/turevs/projeto-lp1-crud/src/main.cpp" "CMakeFiles/program.dir/src/main.cpp.o" "gcc" "CMakeFiles/program.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links.

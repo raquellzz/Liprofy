@@ -1,4 +1,4 @@
-# Install script for directory: /home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud
+# Install script for directory: /home/turevs/projeto-lp1-crud
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/levingu/Documentos/Trabalho LP1/projeto-lp1-crud/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/turevs/projeto-lp1-crud/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
