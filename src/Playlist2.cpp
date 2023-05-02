@@ -75,6 +75,7 @@ void Playlist::deletar(std::string titulo){ // deleta uma música da playlist
         tam ++;
         corr = corr->proximo;
     }
+    tam --;
 
     corr = cabeca;
 
@@ -83,11 +84,11 @@ void Playlist::deletar(std::string titulo){ // deleta uma música da playlist
     }
     else { // se a música estiver na playlist
         
-        if(achou == 1){ // se a música estiver na playlist apenas uma vez
+        if(pos == 1){ // se a música estiver na playlist apenas uma vez
             cabeca = cabeca->proximo;
             delete corr;
         }
-        else if(achou == tam){ // se a música estiver na playlist na ultima posição
+        else if(pos == tam){ // se a música estiver na playlist na ultima posição
             while(corr->proximo != nullptr){
                 anterior = corr;
                 corr = corr->proximo;
@@ -97,7 +98,7 @@ void Playlist::deletar(std::string titulo){ // deleta uma música da playlist
             delete corr;
         }
         else{ // se a música estiver na playlist em qualquer outra posição
-            for(int i = 0; i < pos; i ++){
+            for(int i = 1; i < pos; i ++){
                 anterior = corr;
                 corr = corr->proximo;
             }

@@ -72,7 +72,7 @@ void Lista_Playlist::remover_playlist(std::string nome){ // remove uma playlist 
     Playlist *anterior = new Playlist;
 
     corr = cabeca;
-    int achou = 0, pos = 0, tam = 0; 
+    int achou = 0, pos = 0, tam = 1; 
     // achou é o número de vezes que a playlist foi encontrada na lista
     //pos é a posição da playlist na lista
     //tam é o tamanho da lista
@@ -80,11 +80,12 @@ void Lista_Playlist::remover_playlist(std::string nome){ // remove uma playlist 
     while(corr != nullptr){ // percorre a lista
         if(corr->nome_playlist == nome){ // se o nome da playlist for igual ao nome da playlist atual
             pos = tam; 
-            achou = 1;
+            achou ++;
         }
         tam ++;
         corr = corr->proximo;
     }
+    tam --;
 
     corr = cabeca;
 
@@ -93,11 +94,11 @@ void Lista_Playlist::remover_playlist(std::string nome){ // remove uma playlist 
     }
     else { // se a playlist foi encontrada
         
-        if(achou == 1){ // se a playlist foi encontrada apenas uma vez
+        if(pos== 1){ // se a playlist foi encontrada apenas uma vez
             cabeca = cabeca->proximo;
             delete corr;
         }
-        else if(achou == tam){ // se a playlist foi encontrada na ultima posição
+        else if(pos == tam){ // se a playlist foi encontrada na ultima posição
             while(corr->proximo != nullptr){ // percorre a lista
                 anterior = corr;
                 corr = corr->proximo;
@@ -107,7 +108,7 @@ void Lista_Playlist::remover_playlist(std::string nome){ // remove uma playlist 
             delete corr;
         }
         else{ // se a playlist foi encontrada em qualquer outra posição
-            for(int i = 0; i < pos; i ++){ // percorre a lista
+            for(int i = 1; i < pos; i ++){ // percorre a lista
                 anterior = corr;
                 corr = corr->proximo;
             }
