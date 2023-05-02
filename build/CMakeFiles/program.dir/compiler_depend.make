@@ -180,6 +180,8 @@ CMakeFiles/program.dir/src/Lista_Playlist.cpp.o: ../src/Lista_Playlist.cpp \
   /usr/include/c++/11/bits/istream.tcc \
   ../include/Lista_Playlist.h \
   ../include/Playlist2.h \
+  ../include/Musica2.h \
+  ../include/Playlist2.h \
   ../include/Musica2.h
 
 CMakeFiles/program.dir/src/Playlist2.cpp.o: ../src/Playlist2.cpp \
@@ -360,6 +362,7 @@ CMakeFiles/program.dir/src/Playlist2.cpp.o: ../src/Playlist2.cpp \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
+  ../include/Musica2.h \
   ../include/Musica2.h
 
 CMakeFiles/program.dir/src/main.cpp.o: ../src/main.cpp \

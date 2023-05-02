@@ -146,4 +146,6 @@ CMakeFiles/program.dir/src/Lista_Playlist.cpp.o: \
  /usr/include/c++/11/bits/istream.tcc \
  /home/levingu/Documentos/Trabalho\ LP1/projeto-lp1-crud/include/Lista_Playlist.h \
  /home/levingu/Documentos/Trabalho\ LP1/projeto-lp1-crud/include/Playlist2.h \
+ /home/levingu/Documentos/Trabalho\ LP1/projeto-lp1-crud/include/Musica2.h \
+ /home/levingu/Documentos/Trabalho\ LP1/projeto-lp1-crud/include/Playlist2.h \
  /home/levingu/Documentos/Trabalho\ LP1/projeto-lp1-crud/include/Musica2.h
