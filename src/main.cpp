@@ -1,7 +1,6 @@
 #include <iostream>
 #include "Musica.h"
 #include "Playlist.h"
-#include "Lista_Playlist_old.h"
 #include "Menu.cpp"
 
 int main() {

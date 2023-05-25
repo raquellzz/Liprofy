@@ -118,7 +118,7 @@ public:
             std::cout << "Tocar a próxima música? Digite [s/n]: ";
             std::cin >> input;
             std::cout << '\n';
-            if (input == 'n')
+            if (input == "n")
             {
                 std::cout << "processo encerrado" << '\n';
                 return;
@@ -141,7 +141,7 @@ public:
         return nullptr;
     }
     //====================================== operadores ========================================
-    friend Lista<T> operator=(Lista<T> &lista)
+    Lista<T> operator=(Lista<T> &lista)
     {
         //caso lista vazia
         if(lista.getCabeca() == nullptr) 
@@ -174,7 +174,7 @@ public:
             aux1 = temp;
         }
     }
-    friend Lista<T> operator+(Lista<T> &lista)
+    Lista<T> operator+(Lista<T> &lista)
     {
         //caso lista vazia
         if (lista.getCabeca() == nullptr)
@@ -195,13 +195,13 @@ public:
         cauda->proximo = nullptr;
         return *this;
     }
-    friend bool operator ==(Lista<T> &musicas1, &musicas2)
+    bool operator ==(Lista<T> &musicas1)
     {
-        if(musicas1.getTamanho() != musicas2.getTamanho())
+        if(tamaho != musicas1.getTamanho())
         {
             return false;
         }
-        No<T> *aux1 = musicas2.getCabeca();
+        No<T> *aux1 = cabeca;
         No<T> *aux2 = musicas1.getCabeca();
         while(aux1 != nullptr && aux2 != nullptr)
         {

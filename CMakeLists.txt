@@ -8,7 +8,6 @@ include_directories( include )
 
 add_executable( program
                 src/main.cpp
-                src/Playlist.cpp
-                src/Lista_Playlist.cpp)
+                src/Menu.cpp)
 
 set_property(TARGET program PROPERTY CXX_STANDARD 14)

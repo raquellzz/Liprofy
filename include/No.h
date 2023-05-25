@@ -21,12 +21,12 @@ public:
     // Dstrc.
     ~No() { delete valor; }
     // Operadores
-    friend operator=(No<T> &no)
+    friend No<T> operator=(No<T> &no)
     {
         this->valor = no.getValor();
         this->proximo = no.getProximo();
     }
-    friend operator==(No<T> &no) { return this->valor == no.getValor(); }
+    friend bool operator==(No<T> &no) { return this->valor == no.getValor(); }
     // sets
     void setProximo(No<T> *proximo) { this->proximo = proximo; }
     void setValor(T valor) { this->valor = valor; }
