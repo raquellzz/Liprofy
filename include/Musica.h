@@ -24,7 +24,9 @@ private:
     std::string getTitulo() { return titulo; }
     std::string getArtista() { return artista; }
     //=================================== Operadores ======================================
-    Musica operator=(Musica &musica) { this->titulo = musica.getTitulo(); this->artista = musica.getArtista(); }
+    Musica operator=(Musica &musica) { this->titulo = musica.getTitulo(); this->artista = musica.getArtista(); return *this; }
     bool operator==(Musica &musica) { return this->titulo == musica.getTitulo() && this->artista == musica.getArtista(); }
-    friend std::ostream operator<<(std::ostream &os, Musica &musica) { os << musica.getTitulo() << " - " << musica.getArtista(); }
+    friend std::ostream operator<<(std::ostream &os, Musica &musica) {
+         os << musica.getTitulo() << " - " << musica.getArtista(); 
+         return os;}
 };

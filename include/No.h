@@ -19,9 +19,8 @@ public:
         this->proximo = proximo;
     }
     // Dstrc.
-    ~No() { delete valor; }
     // Operadores
-    friend No<T> operator=(No<T> &no)
+    friend No<T> &operator=(No<T> &no)
     {
         this->valor = no.getValor();
         this->proximo = no.getProximo();

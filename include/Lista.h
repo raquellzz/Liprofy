@@ -197,7 +197,7 @@ public:
     }
     bool operator ==(Lista<T> &musicas1)
     {
-        if(tamaho != musicas1.getTamanho())
+        if(tamanho != musicas1.getTamanho())
         {
             return false;
         }
