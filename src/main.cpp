@@ -1,13 +1,12 @@
 #include <iostream>
 #include "Musica.h"
 #include "Playlist.h"
-#include "Lista_Playlist_old.h"
 #include "Menu.cpp"
 
 int main() {
   int acao; // acao do usuario
-  Lista<Playlist> playlists; // lista de playlists
-  Playlist *Padrao = new Playlist(Padrao);
+  Lista<Playlist> *playlists; // lista de playlists
+  Playlist *Padrao = new Playlist("Padrao");
   
 
   while (acao != 0) { // enquanto o usuario não digitar 0

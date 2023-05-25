@@ -2,10 +2,13 @@
 #include "Lista.h"
 #include "Musica.h"
 
-void listar_playlist(Lista<Playlist> plays){
+void listar_playlist(Lista<Playlist> *plays){
     std::cout << "Aqui está a lista de todas as playlists: " << '\n';
     std::cout << "----------------Início" << '\n';
+
     //chama a função listar playlists
+    plays->listar();
+
     std::cout << "-------------------Fim" << '\n';
 }
 
@@ -16,24 +19,24 @@ void listar_musicas(Playlist *play){
     std::cout << "-------------------Fim" << '\n';
 }
 
-void cria_playlist(Lista<Playlist> plays)
+void cria_playlist(Lista<Playlist> *plays)
 {
     std::string nome;
-    listar_playlist();
+    listar_playlist(plays);
     std::cout << "Defina o nome da playlist: ";
 
-    cin >> nome;
+    std::cin >> nome;
     //chama a função criar playlist
     std::cout << "-------------------A playlist foi adicionada com sucesso" << '\n';
 }
 
-void remove_playlist(Lista<Playlist> plays)
+void remove_playlist(Lista<Playlist> *plays)
 {
     std::string nome;
-    listar_playlist();
+    listar_playlist(plays);
     std::cout << "Digite o nome da playlist a ser deletada: ";
 
-    cin >> nome;
+    std::cin >> nome;
     //chama a função criar playlist
     std::cout << "-------------------A playlist foi deletada com sucesso" << '\n';
 }
@@ -41,11 +44,11 @@ void remove_playlist(Lista<Playlist> plays)
 void cria_musica(Playlist *play)
 {
     std::string titulo, artista;
-    listar_musicas();
+    listar_musicas(play);
     std::cout << "Defina o título da música: ";
-    cin >> titulo;
+    std::cin >> titulo;
     std::cout << '\n' << "Defina o artista da música: ";
-    cin >> artista;
+    std::cin >> artista;
 
     //chama a função criar musica
     std::cout << "-------------------A música foi adicionada com sucesso" << '\n';
@@ -54,21 +57,21 @@ void cria_musica(Playlist *play)
 void add_musica(Playlist *play)
 {
     std::string titulo;
-    listar_musicas();
+    listar_musicas(play);
     std::cout << "Digite o título de uma música da lista: ";
-    cin >> titulo;
+    std::cin >> titulo;
 
 
     //adiciona essa música na playlist
     std::cout << "-------------------A música foi adicionada com sucesso" << '\n';
 }
 
-void remove_musica(Playlist *play, Lista<Playlist> plays)
+void remove_musica(Playlist *play, Lista<Playlist> *plays)
 {
     std::string titulo;
-    listar_musicas();
+    listar_musicas(play);
     std::cout << "Digite o título da música a ser deletada: ";
-    cin >> titulo;
+    std::cin >> titulo;
 
     //remove a musica
     //remove essa musica de todas as playlists
@@ -76,7 +79,7 @@ void remove_musica(Playlist *play, Lista<Playlist> plays)
 }
 
 
-void acessa_playlist(Playlist *play, Lista<Playlist> plays){
+void acessa_playlist(Playlist *play, Lista<Playlist> *plays){
     int acao;
     while(acao != 0){
         std::cout << '\n' << "0. Voltar" << '\n';
@@ -95,17 +98,17 @@ void acessa_playlist(Playlist *play, Lista<Playlist> plays){
             }
         
         case 1:{
-            add_musica();
+            add_musica(play);
 
             break;
             }
         case 2:{
-            remove_musica();
+            remove_musica(play, plays);
 
             break;
             }
         case 3:{
-            listar_musicas();
+            listar_musicas(play);
 
             break;
             }
@@ -128,7 +131,7 @@ void primeiro_menu()
     std::cout << '\n' << "Escolha uma ação: ";
 }
 
-void playlists_menu(Playlist *play, Lista<Playlist> plays)
+void playlists_menu(Playlist *play, Lista<Playlist> *plays)
 {
     int acao;
     while(acao != 0){
@@ -148,17 +151,17 @@ void playlists_menu(Playlist *play, Lista<Playlist> plays)
             }
         
         case 1:{
-            cria_playlist();
+            cria_playlist(plays);
 
             break;
             }
         case 2:{
-            remove_playlist();
+            remove_playlist(plays);
 
             break;
             }
         case 3:{
-            listar_playlist();
+            listar_playlist(plays);
 
             break;
             }
@@ -176,7 +179,7 @@ void playlists_menu(Playlist *play, Lista<Playlist> plays)
     }
 }
 
-void musicas_menu(Playlist *play, Lista<Playlist> plays)
+void musicas_menu(Playlist *play, Lista<Playlist> *plays)
 {
     int acao;
     while(acao != 0){
