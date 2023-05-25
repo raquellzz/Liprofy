@@ -1,33 +1,33 @@
 #include <iostream>
+#include "Lista.h"
 #include "Musica.h"
 
-#ifndef PLAYLIST2_H
-#define PLAYLIST2_H
+#pragma once
 
 class Playlist
 {
+private:
+    std::string nome;
+    Lista<Musica> musicas;
 public:
-    std::string nome_playlist; // nome da playlist
-    Musica *cabeca; // ponteiro para a primeira musica da playlist
-    Musica *cauda; // ponteiro para a ultima musica da playlist
-    Playlist *proximo; // ponteiro para a proxima playlist
+    // Métodos especiais
+    // Cstrc.
+    Playlist(std::string nome)
+    {
+        this->nome = nome;
+    }
+    // Dstrc.
+    ~Playlist()
+    {
 
-    // Playlist(std::string nome_playlist = "", Musica *cabeca = nullptr, Musica *cauda  = nullptr, Playlist *proximo = nullptr);
-
-    int buscar(std::string titulo, std::string artista); // retorna 1 se a musica existe na playlist e 0 se não existe
-
-    Musica* busca(std::string titulo); // retorna a musica
-
-    void inserir(Musica *novo); // adiciona uma musica na playlist
-
-    void deletar(std::string titulo); // deleta uma musica da playlist
-
-    void listar(); // lista todas as musicas da playlist
-
-    void tocar(); // toca a playlist
-
-    void Destructor_Playlist(); // destrutor da playlist
+    }
+    //====================================== Sets =========================================
+    void setNome(std::string nome) { this->nome = nome; }
+    //====================================== Gets =========================================
+    std::string getNome() { return nome; }
+    Lista<Musica> getMusicas() { return musicas; }
+    //=================================== Operadores ======================================
+    Playlist operator=(Playlist &playlist) { this->nome = playlist.getNome(); this->musicas = playlist.getMusicas(); }
+    bool operator==(Playlist &playlist) { return this->nome == playlist.getNome() && musicas == playlist.getMusicas(); }
 
 };
-
-#endif

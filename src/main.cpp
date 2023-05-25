@@ -1,28 +1,28 @@
 #include <iostream>
 #include "Musica.h"
 #include "Playlist.h"
-#include "Lista_Playlist.h"
-#include "menu.cpp"
+#include "Lista_Playlist_old.h"
+#include "Menu.cpp"
 
 int main() {
   int acao; // acao do usuario
-  Lista_Playlist *Todas_play = new Lista_Playlist; // lista de playlists
-  Playlist *play_padrao = new Playlist; // playlist padrão
+  Lista<Playlist> playlists; // lista de playlists
+  Playlist *Padrao = new Playlist(Padrao);
   
 
   while (acao != 0) { // enquanto o usuario não digitar 0
-    menu_principal();
+    primeiro_menu();
 
     std::cin >> acao;
     std::cout << std::endl;
 
     switch (acao) {
     case 1: // gerencia as playlists
-      gerenc_play(Todas_play, play_padrao);
+      playlists_menu(Padrao, playlists);
       break;
 
     case 2: // gerencia as musicas
-      gerenc_music(play_padrao, Todas_play);
+      musicas_menu(Padrao, playlists);
       break;
 
     case 0: // termina o programa
@@ -30,7 +30,6 @@ int main() {
       break;
     }
   }
-  play_padrao->Destructor_Playlist(); // destrutor da playlist padrão
-  Todas_play->Destructor_Lista(); // destrutor da lista de playlists
+  
   return 0;
 }
